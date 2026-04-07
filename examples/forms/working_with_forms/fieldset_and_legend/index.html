@@ -1,0 +1,64 @@
+<html>
+  <head>
+    <title>Fieldset and Legend Example</title>
+
+    <style>
+      form {
+        max-width: 400px;
+        margin: 0 auto;
+        padding: 1rem;
+        border: 1px solid #ccc;
+      }
+
+      fieldset {
+        margin-bottom: 1rem;
+
+      }
+
+      input {
+        width: 100%;
+        padding: 0.5rem;
+        margin-bottom: 1rem;
+      }
+    </style>
+  </head>
+
+  <body>
+    <form>
+      <fieldset>
+        <legend>Personal Information</legend>
+    
+        <label for="first-name">First Name:</label>
+        <input type="text" id="first-name" name="first-name">
+    
+        <label for="last-name">Last Name:</label>
+        <input type="text" id="last-name" name="last-name">
+    
+        <label for="dob">Date of Birth:</label>
+        <input type="date" id="dob" name="dob">
+      </fieldset>
+    
+      <fieldset>
+        <legend>Account Details</legend>
+    
+        <label for="reg-email">Email:</label>
+        <input type="email" id="reg-email" name="email">
+    
+        <label for="reg-password">Password:</label>
+        <input type="password" id="reg-password" name="password">
+    
+        <label for="confirm-password">Confirm Password:</label>
+        <input type="password" id="confirm-password" name="confirm-password">
+      </fieldset>
+
+      <fieldset disabled>
+        <legend>Shipping Address</legend>
+        <label for="ship-street">Street:</label>
+        <input type="text" id="ship-street" name="ship-street">
+        <!-- All controls in this fieldset are disabled -->
+      </fieldset>
+    
+      <button type="submit">Create Account</button>
+    </form>
+  </body>
+</html>

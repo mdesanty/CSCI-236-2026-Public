@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Simple Flexbox Demo</title>
+
+  <style>
+    /* -----------------------------
+       FLEX CONTAINER PROPERTIES
+    ------------------------------ */
+
+    .container {
+      display: flex;
+      /* Enables flexbox */
+      flex-direction: row;
+      /* Main axis: left to right */
+      justify-content: space-between;
+      /* Space along main axis */
+      align-items: center;
+      /* Align on cross axis */
+      flex-wrap: wrap;
+      /* Allow wrapping */
+      align-content: space-around;
+      /* Spacing between rows */
+
+      height: 300px;
+      border: 3px solid black;
+      padding: 10px;
+      gap: 10px;
+    }
+
+    /* -----------------------------
+       FLEX ITEM PROPERTIES
+    ------------------------------ */
+
+    .item {
+      background-color: lightblue;
+      border: 2px solid navy;
+      text-align: center;
+      padding: 20px;
+      font-weight: bold;
+    }
+
+    .item1 {
+      order: 2;
+      /* Moves later in visual order */
+      flex-grow: 1;
+      /* Grows to fill extra space */
+      flex-shrink: 1;
+      /* Shrinks normally */
+      flex-basis: 100px;
+      /* Starting size */
+    }
+
+    .item2 {
+      order: 1;
+      /* Appears before item1 */
+      flex: 2 1 100px;
+      /* Shorthand: grow, shrink, basis */
+    }
+
+    .item3 {
+      order: 0;
+      /* Default order */
+      flex-grow: 0;
+      /* Does not grow */
+      flex-shrink: 0;
+      /* Will not shrink */
+      flex-basis: 150px;
+      align-self: flex-end;
+      /* Overrides align-items */
+    }
+  </style>
+</head>
+
+<body>
+
+  <h2>Flexbox Container & Item Demo</h2>
+
+  <div class="container">
+    <div class="item item1">Item 1</div>
+    <div class="item item2">Item 2</div>
+    <div class="item item3">Item 3</div>
+  </div>
+
+</body>
+
+</html>
