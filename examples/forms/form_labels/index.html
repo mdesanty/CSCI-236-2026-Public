@@ -1,0 +1,40 @@
+<html>
+  <head>
+    <title>Form Labels Example</title>
+
+    <style>
+      form {
+        max-width: 400px;
+        margin: 0 auto;
+        padding: 1rem;
+        border: 1px solid #ccc;
+      }
+
+      label {
+        display: block;
+        font-weight: bold;
+      }
+
+      input {
+        width: 100%;
+        padding: 0.5rem;
+        margin-top: 0.5rem;
+        margin-bottom: 1rem;
+      }
+    </style>
+  </head>
+
+  <body>
+    <form>
+      <!-- Using the "for" attribute to associate the label with the input -->
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name">
+
+      <!-- Wrapping the input inside the label to associate them -->
+      <label>
+        Email:
+        <input type="text" name="email" placeholder="Email">
+      </label>
+    </form>
+  </body>
+</html>
